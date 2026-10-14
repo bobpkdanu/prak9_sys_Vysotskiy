@@ -137,23 +137,31 @@ int main()
 		}
 		else if (choice == 3)
 		{
-			increaseVol(data,size);
+			applyProcessing(data, size, *processors[0]);
+			/*increaseVol(data,size);*/
 		}
 		else if (choice == 4)
 		{
-			decreaseVol(data, size);
+			applyProcessing(data, size, *processors[1]);
+			/*decreaseVol(data, size);*/
 		}
 		else if (choice == 5)
 		{
-			resetSmallVal(data, size);
+			applyProcessing(data, size, *processors[2]);
+			//resetSmallVal(data, size);
 		}
 		else if (choice == 6)
 		{
-			limitAmp(data, size);
+			applyProcessing(data, size, *processors[3]);
+			/*limitAmp(data, size);*/
 		}
 		else if (choice == 7)
 		{
 			cout << "Пока" << endl;
+		}
+		else 
+		{
+			cout << "Это мы ещё посмотрим" << endl;
 		}
 	} while (choice != 7);
 
